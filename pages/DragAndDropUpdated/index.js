@@ -14,8 +14,8 @@ const DEFAULT_BOX = {
 export default function DragAndDrop() {
     const [clicked, setClicked] = useState(false)
     const [components, setComponents] = useState([{
-        width: 200,
-        height: 200,
+        width: 50,
+        height: 50,
         x: 0,
         y: 0,
         id: 0

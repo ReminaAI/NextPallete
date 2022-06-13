@@ -10,13 +10,13 @@ export default function UpdatedComponent({ clicked, setClicked, setComponents, c
         } else {
             for (const element of estatic) {
                 // //left side of static elements
-                if ((event.pageX + component.width / 2 >= element.x) && (component.x + 10 <= element.x + element.width) && (component.y + component.height / 2 >= element.y + 10) && (component.y - component.height / 2 <= element.y + element.height - 5)) {
+                if ((event.pageX + component.width / 2 >= element.x) && (component.x + component.width / 2 <= element.x + element.width / 3) && (event.pageY + component.height / 2 >= element.y) && (event.pageY - component.height / 2 <= element.y + element.height)) {
                     console.log("LEFT")
-                    //return element.x - component.width
+                    return element.x - component.width
                 }
                 else
                     //right side of static elements
-                    if ((event.pageX <= element.x + element.width) && (component.x + component.width / 2 >= element.x + 10) && (component.y + component.height / 2 >= element.y + 10) && (component.y - component.height / 2 <= element.y + element.height - 10)) {
+                    if ((event.pageX - component.width / 2 <= element.x + element.width) && (component.x >= element.x + element.width / 3) && (event.pageY + component.height / 2 >= element.y) && (event.pageY - component.height / 2 <= element.y + element.height)) {
                         console.log("RIGHT")
                         return element.x + element.width
                     }
@@ -32,19 +32,18 @@ export default function UpdatedComponent({ clicked, setClicked, setComponents, c
             return 0
         } else {
             for (const element of estatic) {
-                // //Top side of static Components
-                // if ((event.pageY + component.height / 2 >= element.y) && (component.y + 10 <= element.y + element.height) && (component.x + component.width >= element.x + 10) && (component.x <= element.x + element.width - 10)) {
-                //     console.log("TOP")
-                //     return element.y - component.height
-                // }
-                // else
-                //     //Bottom side of static components
-                //     if ((event.pageY - component.height / 2 <= element.y + element.height) && (component.y - 10 >= element.y) && (component.x + component.width >= element.x + 10) && (component.x <= element.x + element.width - 10)) {
-                //         console.log("BOTTOM")
-                //         return element.y + element.height
-                //     }
+                // //left side of static elements
+                if ((event.pageY + component.height / 2 >= element.y) && (component.y + component.height / 2 <= element.y + element.height / 3) && (event.pageX + component.width / 2 >= element.x) && (event.pageX - component.width / 2 <= element.x + element.width)) {
+                    console.log("TOP")
+                    return element.y - component.height
+                }
+                else
+                    //right side of static elements
+                    if ((event.pageY - component.height / 2 <= element.y + element.height) && (component.y >= element.y + element.height / 3) && (event.pageX + component.width / 2 >= element.x) && (event.pageX - component.width / 2 <= element.x + element.width)) {
+                        console.log("BOTTOM")
+                        return element.y + element.height
+                    }
             }
-
         }
         return event.pageY - component.height / 2
     }
