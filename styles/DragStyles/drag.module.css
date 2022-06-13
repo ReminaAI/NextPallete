@@ -1,0 +1,54 @@
+.component {
+    width: 500px;
+    border-radius: 5%;
+    background-color: rgb(144, 110, 110);
+    position: absolute;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(223, 221, 221);
+}
+
+.dashboard {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    height: 80px;
+    background-color: wheat;
+}
+
+.staticComponent {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+
+/* components.reduce((acc, e) => {
+    e.id !== component.id ? 
+    acc.push(e) :
+    return acc
+}, [])
+
+[{
+    x: e.pageX + component.width / 2 >= e.view.innerWidth ?
+        e.view.innerWidth - component.width :
+        e.pageX - component.width / 2 <= 0 ?
+            0 :
+            e.pageX - component.width / 2,
+
+    y: e.pageY + component.height / 2 >= e.view.innerHeight ?
+        e.view.innerHeight - component.height :
+        e.pageY - component.height / 2 <= 0 ?
+            0 :
+            e.pageY - component.height / 2,
+
+    width: component.width,
+    height: component.height
+}] */

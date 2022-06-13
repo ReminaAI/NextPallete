@@ -1,5 +1,5 @@
 *.tar.gz
 .DS_Store
-node_modules
+/* node_modules */
 next
 .env
