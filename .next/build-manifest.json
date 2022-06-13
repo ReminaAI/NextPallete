@@ -15,10 +15,10 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
-    "/": [
+    "/DragAndDropUpdated": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/index.js"
+      "static/chunks/pages/DragAndDropUpdated.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
